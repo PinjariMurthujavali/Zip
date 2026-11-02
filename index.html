@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UltraZip - File Compressor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">ZIP<span>PRO</span></div>
+      <div class="secure">🔒 100% Local Processing</div>
+    </header>
+
+    <section class="hero">
+      <div class="tag">⚡ FAST · PRIVATE · FREE</div>
+      <h1>Compress Files.<br><span>Save More Space.</span></h1>
+      <p>Compress large files into ZIP archives directly on your device.</p>
+    </section>
+
+    <section class="panel">
+      <div class="drop-zone" id="dropZone">
+        <div class="upload-icon">↑</div>
+        <h2>Drop your files here</h2>
+        <p>or click below to browse your device</p>
+        <label class="browse">
+          Select Files
+          <input type="file" id="fileInput" multiple hidden>
+        </label>
+        <small>Large files supported · Multiple files · ZIP64</small>
+      </div>
+
+      <div class="file-section">
+        <div class="section-head">
+          <b>Selected Files</b>
+          <button id="clearBtn" class="clear">Clear all</button>
+        </div>
+        <div id="fileList" class="file-list">
+          <p class="empty">No files selected yet</p>
+        </div>
+        <div class="total">
+          <span>Total size</span>
+          <strong id="totalSize">0 MB</strong>
+        </div>
+      </div>
+
+      <div class="settings">
+        <label for="level">Compression level</label>
+        <select id="level">
+          <option value="1">Level 1 - Fast</option>
+          <option value="3">Level 3 - Balanced Fast</option>
+          <option value="6" selected>Level 6 - Recommended</option>
+          <option value="9">Level 9 - Maximum</option>
+        </select>
+      </div>
+
+      <button id="compressBtn" class="compress" disabled>
+        ⚡ Compress & Download ZIP
+      </button>
+
+      <div id="progressArea" class="progress-area" hidden>
+        <div class="progress-info">
+          <span id="status">Preparing...</span>
+          <b id="percentage">0%</b>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar"></div>
+        </div>
+        <p id="progressDetail">Please keep this tab open.</p>
+      </div>
+
+      <div id="result" class="result" hidden></div>
+      <div id="error" class="error" hidden></div>
+    </section>
+
+    <footer>
+      <p>🔐 Your files never leave your device.</p>
+      <p>Powered by ZIP.js · ZIP64 support</p>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
