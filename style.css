@@ -1,0 +1,294 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #080d19;
+  color: #fff;
+  min-height: 100vh;
+  padding: 25px 16px;
+}
+
+.app {
+  max-width: 760px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 65px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #7c83ff;
+}
+
+.secure {
+  color: #a5b4c8;
+  font-size: 12px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.tag {
+  display: inline-block;
+  background: #171e36;
+  color: #a5aaff;
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 7vw, 58px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #858cff;
+}
+
+.hero p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.panel {
+  background: #111a2b;
+  border: 1px solid #26344c;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.drop-zone {
+  text-align: center;
+  border: 2px dashed #46557b;
+  border-radius: 15px;
+  padding: 42px 15px;
+  background: #151f34;
+  transition: .2s;
+}
+
+.drop-zone.drag {
+  border-color: #8b8fff;
+  background: #20294b;
+}
+
+.upload-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 18px;
+  background: #292f60;
+  color: #a5aaff;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+}
+
+.drop-zone h2 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.drop-zone p, .drop-zone small {
+  color: #93a1b8;
+  font-size: 12px;
+}
+
+.browse {
+  display: inline-block;
+  margin: 22px 0 15px;
+  background: #777fff;
+  padding: 13px 27px;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.file-section {
+  margin-top: 27px;
+}
+
+.section-head, .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-head {
+  margin-bottom: 13px;
+}
+
+.clear {
+  color: #ff8585;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.file-list {
+  max-height: 190px;
+  overflow-y: auto;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 7px;
+  background: #1b263a;
+  border-radius: 9px;
+  font-size: 12px;
+}
+
+.file-name {
+  overflow-wrap: anywhere;
+}
+
+.file-size {
+  color: #a5aaff;
+  white-space: nowrap;
+}
+
+.empty {
+  color: #78869d;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.total {
+  border-top: 1px solid #2b3850;
+  padding-top: 18px;
+  margin-top: 14px;
+  color: #a9b6ca;
+  font-size: 13px;
+}
+
+.total strong {
+  color: white;
+}
+
+.settings {
+  margin-top: 25px;
+}
+
+.settings label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.settings select {
+  width: 100%;
+  padding: 13px;
+  color: white;
+  background: #1b263a;
+  border: 1px solid #35435c;
+  border-radius: 9px;
+  outline: none;
+}
+
+.compress {
+  width: 100%;
+  margin-top: 22px;
+  padding: 16px;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(100deg, #696fff, #9875fa);
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.compress:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.progress-area {
+  margin-top: 25px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.progress-track {
+  height: 10px;
+  border-radius: 20px;
+  background: #29354b;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #858cff;
+  transition: width .2s;
+}
+
+#progressDetail {
+  color: #9ba9be;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.result, .error {
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.result {
+  background: #14372f;
+  color: #a5f3ce;
+}
+
+.error {
+  background: #421f2a;
+  color: #ffb2b2;
+}
+
+footer {
+  text-align: center;
+  color: #77849a;
+  font-size: 11px;
+  line-height: 2;
+  margin: 30px 0;
+}
+
+@media(max-width: 500px) {
+  header { margin-bottom: 45px; }
+  .panel { padding: 15px; }
+  .secure { font-size: 10px; }
+}
